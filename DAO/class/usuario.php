@@ -59,9 +59,9 @@ class Usuario {
 
 			$row = $results[0];
 			$this->setIdusuario($row['idusuario']);
-			$this->setDtcadastro($row['dtcadastro']);
+			$this->setDeslogin($row['deslogin']);
 			$this->setDessenha($row['dessenha']);
-			$this->setDeslogin(new DateTime($row['deslogin']));
+			$this->setDtcadastro(new DateTime($row['dtcadastro']));
 
 		}
 
@@ -75,15 +75,14 @@ class Usuario {
 			"dessenha"=>$this->getDessenha(),
 			"dtcadastro"=>$this->getDtcadastro()->format("d/m/Y H:i:s")
 
-		))
+		));
 
 
-	}
+
 
 
 }
 
 
 
-
- ?>
+}
